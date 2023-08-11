@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  api:
+    build: .
+    restart: always
+    ports:
+      - "8005:8000"
+    
+    
+     

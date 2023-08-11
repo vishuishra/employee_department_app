@@ -1,0 +1,20 @@
+schema {
+    query: Query
+}
+
+type Employee {
+  employeeId: ID!
+  employeeName: String!
+  department: Department!
+}
+
+type Department {
+  departmentId: ID!
+  departmentName: String!
+  employees: [Employee!]!
+}
+
+type Query {
+  employeeInfo(employeeId: ID!): Employee
+  listEmployees(departmentId: ID!): Department
+}
