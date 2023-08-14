@@ -2,19 +2,45 @@ schema {
     query: Query
 }
 
-type Employee {
-  employeeId: ID!
-  employeeName: String!
-  department: Department!
-}
-
-type Department {
-  departmentId: ID!
-  departmentName: String!
-  employees: [Employee!]!
-}
 
 type Query {
-  employeeInfo(employeeId: ID!): Employee
-  listEmployees(departmentId: ID!): Department
+        departments: [Department!]!
+        employeeByDepartmentId (departmentId : ID!): Department
+    }
+
+type Department {
+    departmentId: ID!
+    departmentName: String!
+    employees: [Employee!]!
 }
+
+type Employee {
+    employeeId: ID!
+    employeeName: String!
+    departmentId: ID!
+}
+
+
+
+# type Employee {
+#   employeeId: ID!
+#   employeeName: String!
+#   department: Department!
+# }
+
+# type Department {
+#   departmentId: ID!
+#   departmentName: String!
+#   employees: [Employee!]!
+# }
+
+# type employeesResult {
+#   employees : [Employee]
+
+# }
+
+
+# type Query {
+#   employeeInfo(employeeId: ID!): Employee
+#   listEmployees(departmentId: ID!): Department
+# }
