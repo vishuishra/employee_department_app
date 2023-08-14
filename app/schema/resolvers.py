@@ -45,7 +45,7 @@ def resolve_employee_by_department_id(_, info,departmentId):
 @department_type.field("employees")
 def resolve_department_employees(department_type, info):
     """
-    departmennt_type: This argument represents the parent object (Author) that the field resolver is resolving for. 
+    departmennt_type: This argument represents the parent object (Department) that the field resolver is resolving for. 
     In other words, it's the instance of the department type that's being resolved.
     You can access its properties and use them to determine the result of the resolver. 
     """   
